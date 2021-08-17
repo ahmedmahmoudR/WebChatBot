@@ -24,6 +24,15 @@
     cursor: pointer
 }
 
+#webchat {
+        height: 70%;
+        width: 30%;
+        position: fixed; 
+        bottom: 0;
+         right: 0;
+         
+      }
+
 .chat-btn .close {
     display: none
 }
@@ -119,29 +128,15 @@ button {
   </head>
   <body>
  
-    <input type="checkbox" id="check"> <label class="chat-btn" for="check"> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
+    <input type="checkbox" id="check"> <label class="chat-btn" for="check"></label> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
 <div class="wrapper">
    
-    <div id="webchat" role="main"></div>
+    <div id="webchat" role="main"> <iframe src="https://webchat.botframework.com/embed/BoTempDemo?s=0o3IInnCP-0.jeUeOFKSjeHSyl0QuU_8MeP14PziPiUCsGac6rbgB04" width="100%" height="500px"></iframe></div>
 </div>
 
 
 
 
-    <script>
-      window.WebChat.renderWebChat(
-        {
-          directLine: window.WebChat.createDirectLine({
-            token: 'yC2uc30mdg0.EmyA2fMLhBEDvZzyY7CAiOxyTn_udRwNgT_yhzhSUdU'
-          }),
-          userID: 'YOUR_USER_ID',
-          username: 'Web Chat User',
-          locale: 'en-US'
-        },
-        document.getElementById('webchat')
-      );
-
-    
-    </script>
+   
   </body>
 </html>

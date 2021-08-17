@@ -22,6 +22,7 @@ https://templatemo.com/tm-538-digital-trend
       src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"
       
     ></script>
+    <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,7 +54,7 @@ https://templatemo.com/tm-538-digital-trend
     cursor: pointer
 }
 
-.chat-btn .close {
+#check:checked~.chat-btn .close {
     display: none
 }
 
@@ -67,7 +68,7 @@ https://templatemo.com/tm-538-digital-trend
     transform: rotate(180deg)
 }
 
-#check:checked~.chat-btn .comment {
+.chat-btn .comment {
     display: none
 }
 
@@ -97,14 +98,14 @@ https://templatemo.com/tm-538-digital-trend
     width: 300px;
     background-color: #fff;
     border-radius: 5px;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.4s;
     z-index: 1000;
     
 }
 
 #check:checked~.wrapper {
-    opacity: 1
+    opacity: 0
 }
 
 .header {
@@ -148,10 +149,10 @@ button {
 </head>
 <body>
   
-  <input type="checkbox" id="check"> <label class="chat-btn" for="check"> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
+     <input type="checkbox" id="check"> <label class="chat-btn" for="check"> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
   <div class="wrapper">
      
-      <div id="webchat" role="main"></div>
+      <div style="height: 60%; width: 100%; margin-top:5%; border: 3px solid blue;" id="webchat" role="main"><iframe src="https://webchat.botframework.com/embed/BoTempDemo?s=0o3IInnCP-0.jeUeOFKSjeHSyl0QuU_8MeP14PziPiUCsGac6rbgB04" width="100%" height="500px"></iframe></div>
   </div>
   
      <!-- MENU BAR -->
@@ -428,20 +429,7 @@ button {
         </div>
       </div>
     </footer>
-<script>
-      window.WebChat.renderWebChat(
-        {
-          directLine: window.WebChat.createDirectLine({
-            token: 'yC2uc30mdg0.EmyA2fMLhBEDvZzyY7CAiOxyTn_udRwNgT_yhzhSUdU'
-          }),
-          userID: 'YOUR_USER_ID',
-          username: 'Web Chat User',
-          locale: 'en-US'
-        },
-        document.getElementById('webchat')
-      );
 
-</script>
 
   
      <!-- SCRIPTS -->
