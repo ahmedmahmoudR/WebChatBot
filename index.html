@@ -54,7 +54,7 @@ https://templatemo.com/tm-538-digital-trend
     cursor: pointer
 }
 
-#check:checked~.chat-btn .close {
+.chat-btn .close { /* add  check checked to open chat in first  */
     display: none
 }
 
@@ -68,7 +68,7 @@ https://templatemo.com/tm-538-digital-trend
     transform: rotate(180deg)
 }
 
-.chat-btn .comment {
+#check:checked~.chat-btn .comment {   /* remove check checked to open chat in first  */
     display: none
 }
 
@@ -98,14 +98,15 @@ https://templatemo.com/tm-538-digital-trend
     width: 300px;
     background-color: #fff;
     border-radius: 5px;
-    opacity: 1;
+    opacity: 0; /* Chanage to 1 to open chat in first  */
     transition: all 0.4s;
     z-index: 1000;
+    border: 3px solid blue;
     
 }
 
 #check:checked~.wrapper {
-    opacity: 0
+    opacity: 1; /* Chanage to 0 to open chat in first  */
 }
 
 .header {
@@ -145,14 +146,21 @@ button {
 #check {
     display: none !important
 }
+
+.webchat--css-zxjye-j7qwjs {
+height: 71%;
+}
     </style>
 </head>
 <body>
   
      <input type="checkbox" id="check"> <label class="chat-btn" for="check"> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
   <div class="wrapper">
+     <div style="height: 60%; width: 100%; margin-top:5%; " id="webchat" role="main"><iframe style="height: 402px;" src="https://webchat.botframework.com/embed/DeBoTe?s=MsLI160Rx0o.xi96GBCTg81ggK7xYznKGrqiNYnIfj6RT2N32Ffzt7o" width="100%" height="500px"></iframe></div>
+      
      
-      <div style="height: 60%; width: 100%; margin-top:5%; " id="webchat" role="main"><iframe src="https://webchat.botframework.com/embed/QNBBO?s=k_AQqBo8Kf4.5hJsPWrNLgpGl2hd-vMqe3n4RHXxY6SfLiJnsLh41fI" width="100%" height="500px"></iframe></div>
+     <img style="width: 31%; height: 15%; position: absolute; top: -39px; right: 90px;" src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif" alt="">
+     
   </div>
   
      <!-- MENU BAR -->
